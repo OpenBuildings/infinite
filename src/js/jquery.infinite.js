@@ -136,20 +136,18 @@ $.extend(true, Infinite.prototype, {
 		}());
 	},
 
-	// Retrieving is finished, successfully or not
-	_done: function( success, direction ) {
+	// No more items in this direction
+	_done: function( direction ) {
 
 		// If fetching items failed (or finished) in both directions,
 		// destroy instance to free up resources
-		if ( !success ) {
 
-			this[ direction + 'Direction' ] = false;
+		this[ direction + 'Direction' ] = false;
 
-			$( this.options[ direction + 'Selector' ] ).remove();
+		$( this.options[ direction + 'Selector' ] ).remove();
 
-			if ( !this.upDirection && !this.downDirection ) {
-				this.destroy();
-			}
+		if ( !this.upDirection && !this.downDirection ) {
+			this.destroy();
 		}
 	},
 
@@ -216,8 +214,7 @@ $.extend(true, Infinite.prototype, {
 				self.loaded( data, direction );
 			})
 			.fail(function() {
-				this.deferred.reject( direction );
-				self._done( false, direction );
+				self._done( direction );
 			})
 			.always(function() {
 				// Always unset the retrieving flag for this direction
@@ -234,8 +231,7 @@ $.extend(true, Infinite.prototype, {
 			nextAnchor, container, children, oldDocumentHeight;
 
 		if ( !data || !data.length ) {
-			this.deferred.resolve( direction, data );
-			this._done( false, direction );
+			this._done( direction );
 			$( nextAnchorSelector ).remove();
 
 			return;
@@ -250,8 +246,7 @@ $.extend(true, Infinite.prototype, {
 		children = container.find( this.options.itemSelector );
 
 		if ( !children.length ) {
-			this.deferred.resolve( direction, data );
-			this._done( false, direction );
+			this._done( direction );
 			$( nextAnchorSelector ).remove();
 
 			return;
@@ -276,19 +271,18 @@ $.extend(true, Infinite.prototype, {
 		nextAnchor = container.find( nextAnchorSelector );
 
 		if ( !nextAnchor.length ) {
-			this.deferred.resolve( direction, data );
-			this._done( false, direction );
+			this._done( direction );
 			$( nextAnchorSelector ).remove();
 
 			return;
 		}
 
 		$( nextAnchorSelector ).replaceWith( nextAnchor );
-		this._done( true, direction );
 	},
 
 	// Destroy the instance
 	destroy: function() {
+		this.deferred.resolve();
 		$.removeData( this.element, PLUGIN );
 		this._clearTimeout();
 	}
