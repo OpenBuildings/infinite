@@ -23,7 +23,7 @@
 	module('jQuery#infinite', {
 		// This will run before each test in this module.
 		setup: function() {
-			this.items = $('#qunit-fixture').children();
+			this.items = $('#long-list').children();
 		}
 	});
 

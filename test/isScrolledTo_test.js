@@ -23,7 +23,8 @@
 	module('jQuery#isScrolledTo', {
 		// This will run before each test in this module.
 		setup: function() {
-			this.element = $('#qunit-fixture').children().first();
+			this.element = $('#long-list').children().first();
+			this.elementLast = $('#long-list').children().last();
 		}
 	});
 
