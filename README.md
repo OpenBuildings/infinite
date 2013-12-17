@@ -1,4 +1,4 @@
-# Infinite scroll
+# Infinite scroll [![Build Status](https://travis-ci.org/OpenBuildings/infinite.png?branch=master)](https://travis-ci.org/OpenBuildings/infinite)
 
 Infinite scroll is an opinionated endless pagination jQuery plugin.
 
