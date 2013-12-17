@@ -231,7 +231,7 @@ $.extend(true, Infinite.prototype, {
 	loaded: function( data, direction ) {
 		var
 			nextAnchorSelector = this.options[ direction + 'Selector' ],
-			nextAnchor, container, children;
+			nextAnchor, container, children, oldDocumentHeight;
 
 		if ( !data || !data.length ) {
 			this.deferred.resolve( direction, data );
@@ -257,9 +257,19 @@ $.extend(true, Infinite.prototype, {
 			return;
 		}
 
+		oldDocumentHeight = $( document ).height();
+
 		$( this.element )[ direction === 'up' ?
 			'prepend' :
 			'append' ]( children );
+
+		if ( direction === DIRECTIONS.up ) {
+			$( window ).scrollTop(
+				$( window ).scrollTop() +
+				$( document ).height() -
+				oldDocumentHeight
+			);
+		}
 
 		this.deferred.notify( direction, children );
 
