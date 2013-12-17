@@ -1,0 +1,48 @@
+{
+    "name": "infinite",
+    "title": "Infinite Scroll",
+    "description": "Fast, bi-directional and easy to use jQuery plugin for endless pagination",
+    "keywords": [
+        "infinite",
+        "scroll",
+        "bi-directional",
+        "endless",
+        "pagination"
+    ],
+    "version": "0.1.0",
+    "author": {
+        "name": "Haralan Dobrev",
+        "email": "hkdobrev@gmail.com"
+    },
+    "maintainers": [
+        {
+            "name": "Haralan Dobrev",
+            "email": "hkdobrev@gmail.com"
+        },
+        {
+            "name": "Ivan Kerin",
+            "email": "ikerin@gmail.com"
+        },
+        {
+            "name": "Yasen Yanev",
+            "email": "yasen@openbuildings.com"
+        },
+        {
+            "name": "Emanuil Rusev",
+            "email": "hello@erusev.com"
+        }
+    ],
+    "licenses": [
+        {
+            "type": "BSD 2-clause",
+            "url": "https://github.com/OpenBuildings/infinite/blob/master/LICENSE"
+        }
+    ],
+    "bugs": "https://github.com/OpenBuildings/infinite/issues",
+    "homepage": "https://github.com/OpenBuildings/infinite",
+    "docs": "https://github.com/OpenBuildings/infinite",
+    "download": "https://github.com/OpenBuildings/infinite",
+    "dependencies": {
+        "jquery": ">=1.2.0"
+    }
+}

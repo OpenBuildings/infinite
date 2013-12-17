@@ -1,0 +1,66 @@
+{
+    "name": "infinite",
+    "title": "Infinite Scroll",
+    "description": "Fast, bi-directional and easy to use jQuery plugin for endless pagination",
+    "version": "0.1.0",
+    "homepage": "https://github.com/OpenBuildings/infinite",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/OpenBuildings/infinite"
+    },
+    "bugs": "https://github.com/OpenBuildings/infinite/issues",
+    "keywords": [
+        "infinite",
+        "scroll",
+        "bi-directional",
+        "endless",
+        "pagination"
+    ],
+    "author": {
+        "name": "Haralan Dobrev",
+        "email": "hkdobrev@gmail.com"
+    },
+    "maintainers": [
+        {
+            "name": "Haralan Dobrev",
+            "email": "hkdobrev@gmail.com"
+        },
+        {
+            "name": "Ivan Kerin",
+            "email": "ikerin@gmail.com"
+        },
+        {
+            "name": "Yasen Yanev",
+            "email": "yasen@openbuildings.com"
+        },
+        {
+            "name": "Emanuil Rusev",
+            "email": "hello@erusev.com"
+        }
+    ],
+    "licenses": [
+        {
+            "type": "BSD 2-clause",
+            "url": "https://github.com/OpenBuildings/infinite/blob/master/LICENSE"
+        }
+    ],
+    "dependencies": {
+        "jquery": ">=1.7.0"
+    },
+    "devDependencies": {
+        "grunt-contrib-clean": "~0.4.0",
+        "grunt-contrib-concat": "~0.3.0",
+        "grunt-contrib-csslint": "~0.2.0",
+        "grunt-contrib-cssmin": "~0.7.0",
+        "grunt-contrib-jshint": "~0.6.0",
+        "grunt-contrib-qunit": "~0.2.0",
+        "grunt-contrib-uglify": "~0.2.0",
+        "grunt-contrib-watch": "~0.4.0",
+        "grunt-jscs-checker": "~0.2.0"
+    },
+    "scripts": {
+      "build": "npm install && grunt",
+      "start": "grunt watch",
+      "test": "grunt"
+    }
+}

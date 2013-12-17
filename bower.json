@@ -1,0 +1,33 @@
+{
+  "name": "infinite",
+  "version": "0.1.0",
+  "homepage": "https://github.com/OpenBuildings/infinite",
+  "authors": [
+    "Haralan Dobrev <hkdobrev@gmail.com>"
+  ],
+  "description": "Fast, bi-directional and easy to use jQuery plugin for endless pagination",
+  "main": "jquery.infinite.js",
+  "dependencies": {
+    "jquery": ">=1.7.0"
+  },
+  "devDependencies": {
+    "qunit": "~1.12.0"
+  },
+  "keywords": [
+    "infinite",
+    "scroll",
+    "bi-directional",
+    "endless",
+    "pagination"
+  ],
+  "license": "BSD 2-clause",
+  "ignore": [
+    "**/.*",
+    "bower_components",
+    "bower.json",
+    "Gruntfile.js",
+    "node_modules",
+    "package.json",
+    "test"
+  ]
+}

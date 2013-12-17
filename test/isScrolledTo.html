@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>isScrolledTo Test Suite</title>
+	<style>
+		/* Limit the height of QUnit test result output.
+		The tests are sensitive to the visible part of the DOM, so we want to
+		keep it the same no matter the amount of tests. */
+		#qunit {
+			height: 150px;
+			overflow: scroll;
+		}
+
+		#qunit-header, #qunit-banner, #qunit-userAgent {
+			display: none;
+		}
+
+		#qunit-fixture li {
+			height: 150px;
+		}
+	</style>
+	<!-- Load local jQuery. This can be overridden with a ?jquery=___ param. -->
+	<script src="jquery-loader.js"></script>
+	<!-- Load local QUnit. -->
+	<link rel="stylesheet" href="../bower_components/qunit/qunit/qunit.css" media="screen">
+	<script src="../bower_components/qunit/qunit/qunit.js"></script>
+	<!-- Load local lib and tests. -->
+	<script src="../src/js/jquery.isScrolledTo.js"></script>
+	<script src="isScrolledTo_test.js"></script>
+	<!-- Removing access to jQuery and $. But it'll still be available as _$, if
+			 you REALLY want to mess around with jQuery in the console. REMEMBER WE
+			 ARE TESTING A PLUGIN HERE, THIS HELPS ENSURE BEST PRACTICES. REALLY. -->
+	<script>window._$ = jQuery.noConflict(true);</script>
+</head>
+<body>
+	<div id="qunit"></div>
+	<ul id="qunit-fixture">
+		<li>lame test markup</li>
+		<li>normal test markup</li>
+		<li>awesome test markup</span>
+	</ul>
+</body>
+</html>
