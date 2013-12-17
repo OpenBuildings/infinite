@@ -36,4 +36,12 @@
 		strictEqual(type, 'boolean', 'should be a boolean');
 	});
 
+	test('1st is scrolled to', 1, function() {
+		strictEqual(this.element.isScrolledTo(), true, '1st element should be in viewable area');
+	});
+
+	test('2nd is not scrolled to', 1, function() {
+		strictEqual(this.elementLast.isScrolledTo(), false, '2nd element should not be in viewable area');
+	});
+
 }(jQuery));
