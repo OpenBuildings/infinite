@@ -115,6 +115,7 @@ module.exports = function(grunt) {
 	// Default task.
 	grunt.registerTask('check', [ 'jshint', 'jscs', 'csslint' ]);
 	grunt.registerTask('build', [ 'clean', 'concat', 'uglify', 'cssmin' ]);
+	grunt.registerTask('test', [ 'check', 'qunit' ]);
 	grunt.registerTask('default', [
 		'jshint',
 		'jscs',

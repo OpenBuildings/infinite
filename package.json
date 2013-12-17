@@ -62,8 +62,8 @@
         "grunt-jscs-checker": "~0.2.0"
     },
     "scripts": {
-      "build": "npm install && grunt",
+      "build": "npm install && bower install && grunt",
       "start": "grunt watch",
-      "test": "grunt"
+      "test": "grunt test"
     }
 }
