@@ -200,7 +200,8 @@ $.extend(true, Infinite.prototype, {
 	retrieve: function( direction ) {
 		var
 			self = this,
-			nextAnchor = $( this.options[ direction + 'Selector' ] );
+			nextAnchor = $( this.options[ direction + 'Selector' ] ),
+			url = nextAnchor.prop( 'href' );
 
 		// Set retrieving flag for the current direction
 		this.retrieving[ direction ] = true;
@@ -209,9 +210,9 @@ $.extend(true, Infinite.prototype, {
 
 		nextAnchor.addClass( LOADING_CLASS );
 
-		$.get( nextAnchor.prop( 'href' ) )
+		$.get( url )
 			.done(function( data ) {
-				self.loaded( data, direction );
+				self.loaded( data, direction, url );
 			})
 			.fail(function() {
 				self._done( direction );
@@ -225,7 +226,7 @@ $.extend(true, Infinite.prototype, {
 	},
 
 	// Response from the server is loaded
-	loaded: function( data, direction ) {
+	loaded: function( data, direction, url ) {
 		var
 			nextAnchorSelector = this.options[ direction + 'Selector' ],
 			nextAnchor, container, children, oldDocumentHeight;
@@ -266,7 +267,7 @@ $.extend(true, Infinite.prototype, {
 			);
 		}
 
-		this.deferred.notify( direction, children );
+		this.deferred.notify( direction, children, url );
 
 		nextAnchor = container.find( nextAnchorSelector );
 
