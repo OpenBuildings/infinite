@@ -6,7 +6,7 @@ Infinite scroll is an opinionated endless pagination jQuery plugin.
 
 * **Progressive enhancement** - Apply on top of existing pagination anchors.
 * **Bi-directional** - You could use it for both upwards and downwards scrolling.
-* **Fast scrolling** - Not listening to the `scroll` event so hardware scrolling us used.
+* **Fast scrolling** - Not listening to the `scroll` event so hardware scrolling is used.
 
 ## Requirements
 
