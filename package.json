@@ -2,7 +2,7 @@
     "name": "infinite",
     "title": "Infinite Scroll",
     "description": "Fast, bi-directional and easy to use jQuery plugin for endless pagination",
-    "version": "0.2.1",
+    "version": "0.2.2",
     "homepage": "https://github.com/OpenBuildings/infinite",
     "repository": {
         "type": "git",
