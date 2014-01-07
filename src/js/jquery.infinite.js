@@ -229,7 +229,7 @@ $.extend(true, Infinite.prototype, {
 	loaded: function( data, direction, url ) {
 		var
 			nextAnchorSelector = this.options[ direction + 'Selector' ],
-			nextAnchor, container, children, oldDocumentHeight;
+			nextAnchor, container, children, oldDocumentHeight, nodes;
 
 		if ( !data || !data.length ) {
 			this._done( direction );
@@ -238,11 +238,14 @@ $.extend(true, Infinite.prototype, {
 			return;
 		}
 
+		// Remove scripts from HTML without executing them
+		nodes = $.parseHTML( data );
+
 		// Support for infinite scroll in tables
 		// You cannot append <tr> inside a <div> on some browsers
 		container = $( this.element.nodeName === 'TABLE' ?
 			'<tbody>' :
-			'<div>' ).append( data );
+			'<div>' ).append( nodes );
 
 		children = container.find( this.options.itemSelector );
 
