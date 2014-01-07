@@ -8,7 +8,7 @@
   "description": "Fast, bi-directional and easy to use jQuery plugin for endless pagination",
   "main": "jquery.infinite.js",
   "dependencies": {
-    "jquery": ">=1.7.0"
+    "jquery": ">=1.8.0"
   },
   "devDependencies": {
     "qunit": "~1.12.0"

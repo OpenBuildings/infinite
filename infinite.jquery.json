@@ -43,6 +43,6 @@
     "docs": "https://github.com/OpenBuildings/infinite",
     "download": "https://github.com/OpenBuildings/infinite",
     "dependencies": {
-        "jquery": ">=1.2.0"
+        "jquery": ">=1.8.0"
     }
 }

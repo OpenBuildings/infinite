@@ -10,7 +10,7 @@ Infinite scroll is an opinionated endless pagination jQuery plugin.
 
 ## Requirements
 
-* jQuery 1.7+
+* jQuery 1.8+
 
 ## License
 
